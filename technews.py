@@ -25,4 +25,6 @@ for tag3 in tag2.findAll('div',jscontroller="MRcHif"):
     sheet.append(list)
 
 excel.save('GoogleTechNews.xlsx')
+file = pd.read_excel('GoogleTechNews.xlsx',sheet_name='Tech News',usecols='A:C')
+file.to_html("GoogleTechNews.html",index=False)
 
